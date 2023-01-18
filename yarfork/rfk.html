@@ -1,0 +1,160 @@
+<!doctype html>
+<!--
+   Copyright 2012 Michael Wooten
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+   yarfORk is a fork - thanks to all the original contributors
+-->
+<html>
+  <head>
+    <title>robotfindskitten</title>
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1" />
+    <meta name="description" content="A robotfindskitten fan site." />
+    <meta name="keywords" content="robotfindskitten, robot, finds, kitten, rfk, html5, canvas, game" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="rfk.js"></script>
+    <script type="text/javascript">
+      var gamesPlayed = 0;
+      var kittensFound = 0;
+
+      $(document).ready(function () {
+
+        var canvas = $("#rfk").get(0);
+        var contextAvailable = !!(canvas && canvas.getContext && canvas.getContext("2d"));
+
+        if (contextAvailable) {
+          var rfk = new com.robotfindskitten.Game(canvas, $("#nki").get(0));
+
+          rfk.addStartGameListener(function() {
+            gamesPlayed += 1;
+            $("#gamesPlayed").html("Games Played: " + gamesPlayed);
+          });
+          rfk.addKittenFoundListener(function() {
+            kittensFound += 1;
+            $("#kittensFound").html("Kittens Found: " + kittensFound);
+          });
+          rfk.startGame();
+
+          $("#newGame").on('click', function() { rfk.startGame(); });
+        }
+        else {
+          $("#nki").hide();
+          $("#display").hide();
+          $("#instructions").hide();
+        }
+      });
+    </script>
+    <link rel="stylesheet" href="rfk.css" type="text/css" />
+  </head>
+  <body>
+  <div id="title" class="rfk-text">
+  <nobr>            _           _    __ _           _     _    _ _   _             <br />
+  _ __ ___ | |__   ___ | |_ / _(_)_ __   __| |___| | ___) |_| |_ ___ _ __  <br />
+ | '__/ _ \| '_ \ / _ \| __| |_| | '_ \ / _` / __| |/ / | __| __/ _ \ '_ \ <br />
+ | | | (_) | |_) | (_) | |_|  _| | | | | (_| \__ \   <| | |_| |_  __/ | | |<br />
+ |_|  \___/|_.__/ \___/ \__|_| |_|_| |_|\__,_|___/_|\_\_|\__|\__\___|_| |_|__/\___/\__The <a href="http://www.tutonaut.de" target=_blank>Tutonaut</a> Fork<br />
+                                                                           </nobr>
+    </div>
+
+
+    <div>
+      <canvas id="rfk" class="rfk-border rfk-text" width="800" height="600">
+        <div id="notSupported" class="rfk-text">
+          I'm sorry, but your browser is not worthy of finding kitten.
+          <br />
+          Please upgrade to a modern, robotfindskitten supported browser.
+          <br />
+          <ul>
+            <li><a href="http://www.google.com/chrome" target="_blank">Chrome</a></li>
+            <li><a href="http://www.firefox.com" target="_blank">Firefox</a></li>
+            <li><a href="http://www.apple.com/safari" target="_blank">Safari</a></li>
+          </ul>
+        </div>
+      </canvas>
+     
+
+      <script type="text/javascript">
+      <!--
+        google_ad_client = "ca-pub-4014588473833165";
+        google_ad_slot = "3435728385";
+        google_ad_width = 120;
+        google_ad_height = 600;
+      //-->
+      </script>
+<!--
+      <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+ //-->
+  
+    <div>
+    <div id="nki" class="rfk-border rfk-text bild"></div>
+     <div id="display">
+      <span id="newGame" class="rfk-border rfk-text rfk-label">Neues Spiel</span>
+      <span id="gamesPlayed" class="rfk-border rfk-text rfk-label">Runden gespielt: 0</span>
+      <span id="kittensFound" class="rfk-border rfk-text rfk-label">Kittens gefunden: 0</span>
+	  <span id="kittensFound" class="rfk-border rfk-text rfk-label">Tipps vom Tutonauten: Nicht genug!</span>
+    </div>
+    <div id="instructions" class="rfk-border rfk-text">
+      yarfORk - basierend auf dem supidupi robotfindskitten v1.0.405
+      <br />
+	  Bewege den Roboter (graue #) ueber das Spielfeld - vermutlich eine postapokalyptische Zone, dicht bewachsen mit menschenfressenden Blumenstraussen - mit WASD oder den Pfeiltasten, oder vi-Steuerung, oder durch wilde Tapperei (vielleicht). Beruehre die unbekannten - vielleicht boesen! - Gegensteande, um sie zu identifizieren. Ihr gewinnt, wenn Ihr Kitten findet - ein kulleraugiges, so sueueueueueueuesses (unicode - yeah!) Kaetzchen voller Angst ...
+    </div>
+    <div id="credits" class="rfk-text">
+	  Dies war mal:
+	  <br>
+      This is an unofficial fan port of robotfindskitten by Michael Wooten. For more
+      robotfindskitten, visit the official website at
+      <a href="http://www.robotfindskitten.org" target="_blank">robotfindskitten.org</a>.
+      Complete source code available on
+      <a href="https://github.com/mwootendev/yarfk" target="_blank">Github</a>.
+	  <br>
+	  Und jetzt ist es ein sowas von inoffizieller Fork namens <a href="https://github.com/bili123/yarfORk" target="_blank">yarfORk</a> - ftw! Viel Freude! Und vielen Dank an <a href="http://pixabay.com/" target="_blank">Pixabay</a> fuer die Public-Domain-Bilder!
+	  
+    </div>
+    
+    <br />
+ 
+<!-- 
+    <script type="text/javascript">
+    <!--
+      google_ad_client = "ca-pub-4014588473833165";
+      google_ad_slot = "6920003329";
+      google_ad_width = 728;
+      google_ad_height = 15;
+ 
+    </script>
+
+    <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29090195-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+-->
+
+    
+  </body>
+</html>

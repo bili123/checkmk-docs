@@ -1,0 +1,17 @@
+yarfORk (https://github.com/bili123/yarfORk) is a fork of yarf (https://github.com/mwootendev/yarfk)
+License: http://www.apache.org/licenses/LICENSE-2.0
+
+The original information can be found in the html-file.
+
+Fork by Mirco Lang (gizlog.de / tutonaut.de) for serious reason ...
+This won't work on small smartphonebrowserwindows.
+
+Version 0.1
+Changes:
+-Non-Kitten-Items (NKIs) changed to Links to Workshops at www.tutonaut.de
+-Deactivated/Commented Google Analytics and Adsense of the original yarf author. (There's absolutely nor tracking or Googleing or whatever in yarfORk.)
+-Translated some texts and NKIs.
+-Forked on Github 2014.02.12
+-Addad image-support for NKIs
+
+And most important of all: Don't take anything here seriously and don't blame me for wasting your time - I wasted mine too.
