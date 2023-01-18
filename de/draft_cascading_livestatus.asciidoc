@@ -11,10 +11,9 @@ xref:cmc#[Der {CMK} Micro Core]
 xref:omd_basics#[Instanzen (Sites) mit omd verwalten]
 {related-end}
 
-nuaber aus 123
+
 ////
-// ML: Just testing repo stuff ...123-flict
-// ML: 123-flict part 2 - should be in master
+// ML: Just testing repo stuff ...masterflict
 // ML: ... testing from ml-456 ...
 // ML: ... testing from master ...
 // ML: ml-123 und master via merge
