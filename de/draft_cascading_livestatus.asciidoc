@@ -13,6 +13,7 @@ xref:omd_basics#[Instanzen (Sites) mit omd verwalten]
 
 
 ////
+// ML: Just testing repo stuff ...
 // ML: Schön wäre hier eine Erweiterung des obigen Schaubilds um einige Viewer-Instanzen. Das Hin und Her mit drei Instanzarten ist sonst vielleicht verwirrend.
 // ML: Beim Review bitte mal gucken, ob das Beispiel mit den Kundennetzen und dem Management nicht allzu abwegig ist.
 // ML: Nur für das Review ein eigener Artikel, danach Integration in distributed_monitoring.
