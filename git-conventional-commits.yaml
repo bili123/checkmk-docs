@@ -17,17 +17,17 @@ convention:
   - only_de
   - 'only-de'
   - content-sync
-    #  - draft
+  - draft
   commitScopes: []
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:
-  - feat
+    #  - feat
   - only-en
   - only_de
   - content-sync
   - draft
-  - merge
+    #  - merge
   includeInvalidCommits: true
   commitIgnoreRegexPattern: "^WIP "
   headlines:
@@ -37,6 +37,7 @@ changelog:
     merge: Merges
     breakingChange: BREAKING CHANGES
     only_de: Nur auf Deutsch
+    draft: Hey, ein neuer Draft, supi
 
 
   ## GitHub
