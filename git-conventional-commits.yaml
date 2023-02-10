@@ -13,13 +13,19 @@ convention:
   - chore
   - merge
   - revert
+  - only-en
+  - only-de
+  - content-sync
+  - draft
   commitScopes: []
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:
   - feat
-  - fix
-  - perf
+  - only-en
+  - only-de
+  - content-sync
+  - draft
   - merge
   includeInvalidCommits: true
   commitIgnoreRegexPattern: "^WIP "
@@ -29,6 +35,8 @@ changelog:
     perf: Performance Improvements
     merge: Merges
     breakingChange: BREAKING CHANGES
+    draft: Uiuiuiuiui, ein neuer Draft
+
 
   ## GitHub
   # commitUrl: https://github.com/ACCOUNT/REPOSITORY/commit/%commit%
