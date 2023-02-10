@@ -24,7 +24,7 @@ changelog:
   commitTypes:
   - feat
   - only-en
-  - onlyde
+  - only_de
   - content-sync
   - draft
   - merge
@@ -36,7 +36,7 @@ changelog:
     perf: Performance Improvements
     merge: Merges
     breakingChange: BREAKING CHANGES
-    draft: Uiuiuiuiui, ein neuer Draft
+    only_de: Nur auf Deutsch
 
 
   ## GitHub
