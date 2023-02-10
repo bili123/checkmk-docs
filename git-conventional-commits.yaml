@@ -14,7 +14,7 @@ convention:
   - merge
   - revert
   - only-en
-  - only-de
+  - onlyde
   - content-sync
   - draft
   commitScopes: []
@@ -23,7 +23,7 @@ changelog:
   commitTypes:
   - feat
   - only-en
-  - only-de
+  - onlyde
   - content-sync
   - draft
   - merge
