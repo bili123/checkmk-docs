@@ -2,5 +2,5 @@
     name: Mircos testing script
     description: This hook echoes foobar.
     entry: ml-test
-    language: shell
+    language: script
     types: [text]
