@@ -28,7 +28,7 @@ changelog:
   - content-sync
   - draft
     #  - merge
-  includeInvalidCommits: true
+  includeInvalidCommits: false
   commitIgnoreRegexPattern: "^WIP "
   headlines:
     feat: Features
