@@ -1,0 +1,6 @@
+-   id: ml-test
+    name: Mircos testing script
+    description: This hook echoes foobar.
+    entry: ml-test
+    language: shell
+    types: [text]
