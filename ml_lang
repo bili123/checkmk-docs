@@ -4,7 +4,7 @@
 exec < /dev/tty
 
 # WENN only-de/only-en/translated in der Commit-Message ist, vermutlich alles okay. Hier vereinfacht auf de-Prüfung.
-if egrep -q '^only_de' <<< $1; then
+if $( cat $1 | egrep -q '^only_de'); then
     echo Es beginnt mit only_de - scheint okay, es wird committed.
     exit
 else
