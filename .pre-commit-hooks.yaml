@@ -4,3 +4,10 @@
     entry: ml-test
     language: script
     types: [text]
+-   id: ml_lang
+    name: Language testing
+    description: This hook tests the commit message.
+    entry: ml_lang
+    language: script
+    types: [text]
+
