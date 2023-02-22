@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Nutzereingaben erlauben
+exec < /dev/tty
+
+# WENN only-de/only-en/translated in der Commit-Message ist, vermutlich alles okay. Hier vereinfacht auf de-Prüfung.
+if $(grep -q '^de' $1); then
+    echo Es beginnt mit de - scheint okay, es wird committed, nun aber doch
+    exit
+else
+    # Beispielhafte Prüfung: Anzahl Nicht-PNG-Dateien ungerade --> vermutlich fehlt irgendwas.
+    # Real könnte man hier dann gucken, ob im Commit tatsächlich en-de-Pärchen drin sind.
+    if (( $(git diff --cached --name-only 2>/dev/null | grep -v *.png | sed 's/^.*\///'  | wc -l) % 2 )); then
+        echo "Kein de-Tag und ungerade Zahl - irgendwas vergessen?"
+        read -e -p "Abbrechen (a) oder Commit ausführen (c)? " antwort
+        case $antwort in
+            a) echo Ätsch, Abbruch. && exit 1;;
+            c) echo Okay, ich fahre fort. && exit;;
+        esac
+    else
+        echo Gerade Anzahl - vielleicht okay, auch committing 2 && exit
+    fi
+exit 1
+fi
+
