@@ -20,7 +20,7 @@ else
     #else
     #    echo Gerade Anzahl - vielleicht okay, auch committing 2 && exit
     #fi
-    echo alles falsch
+    echo alles falsch, weil: dollar-1 ist $1
 exit 1
 fi
 
