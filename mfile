@@ -2,7 +2,7 @@ foo
 bar now
 yes
 yes
-yes
+look: yes - conflict from test1))
 no
 yes - conflict
 no
