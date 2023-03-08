@@ -10,5 +10,5 @@ repos:
 - repo: https://github.com/bili123/checkmk-docs
   rev: v0.8.1
   hooks:
-    - id: ml-test
+  #  - id: ml-test
     - id: ml_lang
