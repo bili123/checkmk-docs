@@ -1,32 +1,19 @@
 #!/bin/bash
 
-# Nutzereingaben erlauben
-# exec < /dev/tty
-
-# WENN only-de/only-en/translated in der Commit-Message ist, vermutlich alles okay. Hier vereinfacht auf de-Prüfung.
-# if $( cat $1 | egrep -q '^only-de'); then
-#    echo Es beginnt mit only-de - scheint okay, es wird committed.
-#    exit
-# else
-#    echo "Nö, nochmal - das soll ja mit only-de oder so anfange, ne? ;)"
-# exit 1
-# fi
-
+# Abfrage, ob Commit-Message (in $1) unsere Sprachvorgaben enthält
 case $(egrep -o '^[^: ]+' < "$1") in
 
-        "only-de"|only-en|content-sync)
-                echo alles oki
+        only-de|only-en|content-sync)
                 exit
                 ;;
 
         knw|test)
                 exit
-                echo alles oki
                 ;;
 
         *)
                 echo "Nein, nochmal - Sprachkram fehlt."
-                echo D1 ist $1 und gematcht wird:
+                echo "Stattdessen steht am Anfang:"
                 echo $(egrep -o '^[^: ]+' < "$1")
                 exit 1
                 ;;
