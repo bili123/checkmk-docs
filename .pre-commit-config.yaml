@@ -3,10 +3,10 @@ repos:
     rev: v4.4.0
     hooks:
     -   id: trailing-whitespace
-- repo: https://github.com/qoomon/git-conventional-commits
-  rev: v2.5.1
-  hooks:
-    - id: conventional-commits
+#- repo: https://github.com/qoomon/git-conventional-commits
+#  rev: v2.5.1
+#  hooks:
+#    - id: conventional-commits
 - repo: https://github.com/bili123/checkmk-docs
   rev: v0.8.1
   hooks:
